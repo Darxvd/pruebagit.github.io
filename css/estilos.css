@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FEFEFE;
+}
+.menu_bar{
+     display: none;
+}
+header{
+    width: 100%;
+}
+header nav{
+    background-color: #023859;
+    z-index: 1000;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto;
+}
+header nav ul{
+    list-style: none;
+}
+.img_nav{
+    width: 15%;
+    height: 15%;
+}
+header nav ul li{
+    display: inline-block;
+    position: relative;
+}
+header nav ul li a{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    font-family: monospace;
+    font-size: 20px;
+}
+/*header nav ul li a .img_nav{
+    margin-right: 10px;
+}*/
+header nav ul li a:hover{
+    color: blue;
+}
+header nav ul li:hover .children{
+    display: block;
+}
+header nav ul li .children{
+    display: none;
+    background: #011826;
+    position: absolute;
+    width: 250%;
+    z-index: 1000;
+}
+header nav ul li .children li{
+    display: block;
+    overflow: hidden;
+    border-bottom: 1pd solid rgba(255,255,255, 0.5);
+}
+header nav ul li .children li a{
+    display: block;
+}
+header nav ul li .img_nav{
+    position: relative;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+.menu_bar .btn_menu .men{
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (max-width: 800px){
+    body{
+        padding-top: 80px;
+    }
+
+    .menu_bar{
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        background: rgb(196, 45, 45);
+    }
+
+    .menu_bar .btn_menu{
+        display: block;
+        padding: 20px;
+        color: #fff;
+        overflow: hidden;
+        font-size: 25px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .menu_bar .men{
+        float: right;
+        font-size: 40px;
+    }
+
+    header nav{
+        width: 100%;
+        height: calc(100% - 100px);
+        position: fixed;
+        right: 100%;
+        margin: 0;
+        overflow: scroll;
+    }
+    header nav ul li{
+        display: block;
+        border-bottom: 1px solid rgba(255,255,255, 0.5);
+    }
+    header nav ul li a{
+        display: block;
+        text-align: center;
+    }
+    header nav ul li:hover .children{
+        display: none;
+    }
+    header nav ul li .children{
+        width: 100%;
+        position: relative;
+    }
+    header nav ul li .children li a{
+        margin-left: 10px;
+    }
+    header nav ul li a ul li a .img_nav{
+        width: 10px;
+        height: 10px;
+    }
+}
